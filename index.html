@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌭 GLIZZMAS 🎄 - The Most Wonderful Time of the Year!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="snow-container"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="glizzmas-title">🎅🌭 GLIZZMAS 🌭🎅</h1>
+            <p class="subtitle">ya heard?</p>
+        </header>
+
+        <!-- Question 1: Age Check -->
+        <div id="question1" class="question-screen active">
+            <div class="question-content">
+                <h2 class="question">🎄 Are You 21 or Older? 🎄</h2>
+                <div class="button-group">
+                    <button class="btn btn-option2" onclick="answerQuestion1(false)">Nope</button>
+                    <button class="btn btn-option1" onclick="answerQuestion1(true)">YES! 🌭</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rejection 1: Too Young -->
+        <div id="rejection1" class="question-screen rejection">
+            <div class="question-content">
+                <h2 class="rejection-text">Get Outta Here Pervert!</h2>
+                <img src="https://media1.tenor.com/m/xbukh3N8SrwAAAAC/home-alone-get-out-of-here.gif" alt="Get out!" class="rejection-gif">
+            </div>
+        </div>
+
+        <!-- Question 2: President -->
+        <div id="question2" class="question-screen">
+            <div class="question-content">
+                <h2 class="question">🎅 Who's Your President? 🎅</h2>
+                <div class="button-group">
+                    <button class="btn btn-option1" onclick="answerQuestion2('scrooge')">President Scrooge</button>
+                    <button class="btn btn-option2" onclick="answerQuestion2('byron')">Byron! 🌭</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rejection 2: Wrong President -->
+        <div id="rejection2" class="question-screen rejection">
+            <div class="question-content">
+                <img src="https://media.giphy.com/media/VWsVhATeaceze/giphy.gif" alt="President Scrooge!" class="rejection-gif">
+            </div>
+        </div>
+
+        <!-- Question 3: Are You Leo? -->
+        <div id="question3" class="question-screen">
+            <div class="question-content">
+                <h2 class="question">🌟 Are You Leo? 🌟</h2>
+                <div class="button-group">
+                    <button class="btn btn-option1" onclick="answerQuestion3(true)">Yes! 🌭</button>
+                    <button class="btn btn-option3" onclick="answerQuestion3(false)">No</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rejection 3: Not Leo -->
+        <div id="rejection3" class="question-screen rejection">
+            <div class="question-content">
+                <h2 class="rejection-text">Sucks to Be You, Loser! 🙄</h2>
+                <p class="rejection-subtitle">Better luck next life!</p>
+            </div>
+        </div>
+
+        <!-- Question 4: Birthday -->
+        <div id="question4" class="question-screen">
+            <div class="question-content">
+                <h2 class="question">🎂 Was Your Birthday Recently? 🎂</h2>
+                <div class="button-group">
+                    <button class="btn btn-option3" onclick="answerQuestion4(false)">No</button>
+                    <button class="btn btn-option2" onclick="answerQuestion4(true)">Yes! 🌭</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rejection 4: Bad Birthday -->
+        <div id="rejection4" class="question-screen rejection">
+            <div class="question-content">
+                <h2 class="rejection-text">Get a Better Birthday, Looser! 📅</h2>
+                <p class="rejection-subtitle">Not even the right spelling! 😂</p>
+            </div>
+        </div>
+
+        <!-- Question 5: Good Boy? -->
+        <div id="question5" class="question-screen">
+            <div class="question-content">
+                <h2 class="question">🎁 Have You Been a Good Boy? 🎁</h2>
+                <div class="button-group">
+                    <button class="btn btn-option1" onclick="answerQuestion5('good')">Yes! 😇</button>
+                    <button class="btn btn-option2" onclick="answerQuestion5('bad')">No... 😈</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Finale: Good Boy -->
+        <div id="finale-good" class="question-screen finale finale-good">
+            <div class="finale-background-chaos"></div>
+            <div class="sparkle-trail"></div>
+            <div class="question-content">
+                <h2 class="finale-text explosive-text">🎉 MERRY GLIZZMAS! 🎉</h2>
+                <p class="finale-subtitle mega-bounce">Happy Birthday from your lovely wife, Dan Glizzerian, and some cheesy ginger in an alley.</p>
+                <div class="santa-dance">🎅</div>
+                <div id="sausage-container" class="flying-objects"></div>
+                <div class="cursor-follower" id="cursor-follower-good"></div>
+            </div>
+        </div>
+
+        <!-- Finale: Bad Boy -->
+        <div id="finale-bad" class="question-screen finale finale-bad">
+            <div class="finale-background-chaos"></div>
+            <canvas id="lightning-canvas"></canvas>
+            <div class="electric-trail"></div>
+            <div class="question-content">
+                <h2 class="finale-text explosive-text electric-text">Dont you disrespect the glizz like that!</h2>
+                <div class="devil-dance">😈</div>
+                <div id="redbull-container" class="flying-objects"></div>
+                <div class="cursor-follower" id="cursor-follower-bad"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
