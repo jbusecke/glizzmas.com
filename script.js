@@ -50,7 +50,7 @@ function answerQuestion1(isOldEnough) {
 function answerQuestion2(answer) {
     if (answer === 'byron') {
         showScreen('question3');
-    } else if (answer === 'scrooge') {
+    } else if (answer === 'skroob') {
         showScreen('rejection2');
     }
 }
